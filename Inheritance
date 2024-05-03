@@ -1,0 +1,109 @@
+class Employee{
+
+ protected String Emp_name;
+
+ protected String Emp_address;
+
+ protected String Emp_mail;
+
+ protected int Emp_ID;
+
+ protected long Emp_Mb_no;
+
+ 
+
+ public void Emp_Info(String Emp_name, String Emp_address, String Emp_mail, int Emp_ID, long 
+
+Emp_Mb_no){
+
+ this.Emp_name = Emp_name;
+
+ this.Emp_address = Emp_address;
+
+ this.Emp_mail = Emp_mail;
+
+ this.Emp_ID = Emp_ID;
+
+ this.Emp_Mb_no = Emp_Mb_no;
+
+}
+
+public void display(){
+
+}
+
+public void Gross_Salary(){}
+
+public void Net_Salary(){}
+
+}
+
+class Programmer extends Employee{
+
+ private double BP;
+
+ public double getBP(){
+
+ return this.BP;
+
+ }
+
+ 
+
+ public void setBP(double BP){
+
+ this.BP = BP;
+
+ }
+public void display(){
+
+ System.out.println("Prgremmer Information :-");
+
+ 
+
+System.out.println("Name="+Emp_name+","+"Address="+Emp_address+","+"Mail="+Emp_mail+","+
+
+"Id NUmber="+Emp_ID+","+"Mobile="+Emp_Mb_no);
+
+ }
+
+ 
+
+ public void Gross_Salary(){
+
+ System.out.println("Gross Salary ="+(BP+getBP()*10/100+getBP()*97/100+getBP()*12/100));
+
+ }
+
+ 
+
+ public void Net_Salary(){
+
+ System.out.println("Net Salary 
+
+="+(BP+getBP()*10/100+getBP()*97/100+getBP()*12/100+getBP()*0.1/100));
+
+ }
+
+}
+public class Inheritance{
+
+ public static void main(String[] args){
+
+ Employee obj1 = new Programmer();
+
+ obj1.Emp_Info("Ram","Shrirampur","ram123@gmail.com",6,85334245);
+
+ obj1.display();
+
+ Programmer obj2 = new Programmer();
+
+ obj2.setBP(10000);
+
+ System.out.println(obj2.getBP());
+
+ obj2.Gross_Salary();
+
+ obj2.Net_Salary();
+
+ System.out.println(" ");
