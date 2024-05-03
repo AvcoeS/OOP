@@ -1,0 +1,243 @@
+import java.util.*;
+
+interface Vehicles {
+
+public void speed_up(int a);
+
+public void gear_change(int b);
+
+public void Apply_Break();
+
+}
+
+class Bicycle implements Vehicles {
+
+private int speed;
+
+int gear;
+
+public int getspeed() {
+
+return this.speed;
+
+}
+
+public void setspeed(int speed) {
+
+this.speed = speed;
+
+}
+
+public void speed_up(int increment) {
+
+this.speed = speed + increment;
+
+}
+
+public void gear_change(int change) {
+
+gear = change;
+
+}
+
+public void Apply_Break() {
+
+speed = speed - speed;
+
+gear = 0;
+
+}
+
+public void Display() {
+
+System.out.println("\n\nBicycle Status: ");
+
+System.out.println("Speed of the Bicycle is: " + speed + "km/hr");
+
+System.out.println("Gear of the Bicycle is: " + gear);
+
+}
+
+}
+
+class Car implements Vehicles {
+
+private int speed;
+
+int gear;
+
+public int getspeed() {
+
+return this.speed;
+
+}
+
+public void setspeed(int speed) {
+this.speed = speed;
+
+}
+
+public void speed_up(int increment) {
+
+this.speed = speed + increment;
+
+}
+
+public void gear_change(int change) {
+
+gear = change;
+
+}
+
+public void Apply_Break() {
+
+speed = speed - speed;
+
+gear = 0;
+
+}
+
+public void Display() {
+
+System.out.println("\n\nCar Status: ");
+
+System.out.println("Speed of the Car is: " + speed + "km/hr");
+
+System.out.println("Gear of the Car is: " + gear);
+
+}
+
+}
+
+class Bike implements Vehicles {
+
+private int speed;
+
+int gear;
+
+public int getspeed() {
+
+return this.speed;
+
+}
+
+public void setspeed(int speed) {
+
+this.speed = speed;
+
+}
+
+public void speed_up(int increment) {
+
+this.speed = speed + increment;
+
+}
+
+public void gear_change(int change) {
+
+gear = change;
+
+}
+
+public void Apply_Break() {
+
+speed = speed - speed;
+
+gear = 0;
+
+}
+
+public void Display() {
+
+System.out.println("\n\nBike Status: ");
+System.out.println("Speed of the Bike is: " + speed + "km/hr");
+
+System.out.println("Gear of the Bike is: " + gear);
+
+}
+
+}
+
+public class Interface {
+
+public static void main(String[] args) {
+
+int var1,var2;
+
+Bicycle obj1 = new Bicycle();
+
+Scanner sc = new Scanner(System.in);
+
+System.out.println("enter initial speed:");
+
+var1=sc.nextInt();
+
+obj1.setspeed(var1);
+
+System.out.println(obj1.getspeed());
+
+System.out.println("enter the increased speed:");
+
+var2=sc.nextInt();
+
+obj1.speed_up(var2);
+
+obj1.gear_change(4);
+
+obj1.Display();
+
+obj1.Apply_Break();
+
+obj1.Display();
+
+Car obj2 = new Car();
+
+System.out.println("enter initial speed:");
+
+var1=sc.nextInt();
+
+obj2.setspeed(var1);
+
+System.out.println(obj2.getspeed());
+
+System.out.println("enter the increased speed:");
+
+var2=sc.nextInt();
+
+obj2.speed_up(var2);
+
+obj2.gear_change(4);
+
+obj2.Display();
+
+obj2.Apply_Break();
+
+obj2.Display();
+
+Bike obj3 = new Bike();
+
+System.out.println("enter initial speed:");
+
+var1=sc.nextInt();
+
+obj3.setspeed(var1);
+
+System.out.println(obj3.getspeed());
+
+System.out.println("enter the increased speed:");
+
+var2=sc.nextInt();
+
+obj3.speed_up(var2);
+
+obj3.gear_change(4);
+
+obj3.Display();
+
+obj2.Apply_Break();
+
+obj3.Display();
+
+}
+
+}
